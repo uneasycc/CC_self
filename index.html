@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈超 - 合肥工业大学</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 左侧边栏 -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <img src="avatar.jpg" alt="陈超" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="avatar-placeholder">
+                            <span>陈</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="name">陈超</h1>
+                <p class="title">本科生</p>
+                <p class="affiliation">合肥工业大学<br>电气与自动化工程学院</p>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link active">关于我</a>
+                <a href="#education" class="nav-link">教育背景</a>
+                <a href="#research" class="nav-link">科研经历</a>
+                <a href="#publications" class="nav-link">学术成果</a>
+                <a href="#competitions" class="nav-link">竞赛项目</a>
+                <a href="#skills" class="nav-link">专业技能</a>
+                <a href="#awards" class="nav-link">荣誉奖励</a>
+                <a href="#contact" class="nav-link">联系方式</a>
+            </nav>
+
+            <div class="sidebar-buttons">
+                <button class="sidebar-btn" onclick="openModal('statement')">
+                    <span class="btn-icon">📄</span>
+                    个人陈述
+                </button>
+                <button class="sidebar-btn" onclick="openModal('resume')">
+                    <span class="btn-icon">📋</span>
+                    个人简历
+                </button>
+            </div>
+
+            <div class="sidebar-footer">
+                <p class="update-time">最后更新：2026年5月</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <!-- 关于我 -->
+        <section id="about" class="content-section">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content" id="about-text">
+                <p>我是合肥工业大学电气与自动化工程学院自动化专业的一名本科生，目前专业排名12/187（前6.4%）。对嵌入式系统、工业人工智能以及电力设备故障诊断方向有着浓厚的研究兴趣，在本科期间参与了多项科研项目和学科竞赛，积累了扎实的理论基础和工程实践能力。</p>
+                <p>我相信，自动化技术是推动工业现代化的核心力量，而嵌入式系统与人工智能的结合将是未来智能制造的关键方向。我希望能在研究生阶段继续深入研究，为学科发展贡献自己的力量。</p>
+            </div>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-card-icon">📊</div>
+                    <div class="info-card-content">
+                        <div class="info-card-value">12/187</div>
+                        <div class="info-card-label">专业排名</div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">🔬</div>
+                    <div class="info-card-content">
+                        <div class="info-card-value">3+</div>
+                        <div class="info-card-label">科研项目</div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">🏆</div>
+                    <div class="info-card-content">
+                        <div class="info-card-value">5+</div>
+                        <div class="info-card-label">竞赛获奖</div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">📝</div>
+                    <div class="info-card-content">
+                        <div class="info-card-value">1</div>
+                        <div class="info-card-label">专利申请</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 教育背景 -->
+        <section id="education" class="content-section">
+            <h2 class="section-title">教育背景</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>合肥工业大学</h3>
+                            <span class="timeline-time">2023.09 - 至今</span>
+                        </div>
+                        <p class="timeline-subtitle">自动化专业 · 工学学士（在读）</p>
+                        <p class="timeline-rank">专业排名：12/187（前6.4%）</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courses-section">
+                <h3 class="subsection-title">核心课程</h3>
+                <div class="course-grid" id="course-grid">
+                    <!-- 课程通过JS动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 科研经历 -->
+        <section id="research" class="content-section">
+            <h2 class="section-title">科研经历</h2>
+            <div class="research-list" id="research-list">
+                <!-- 科研项目通过JS动态生成 -->
+            </div>
+        </section>
+
+        <!-- 学术成果 -->
+        <section id="publications" class="content-section">
+            <h2 class="section-title">学术成果</h2>
+            <div class="publications-list" id="publications-list">
+                <div class="publication-item">
+                    <span class="pub-type">专利</span>
+                    <div class="pub-content">
+                        <h4 class="pub-title">一种基于深度学习的GIS局部放电故障识别方法及系统</h4>
+                        <p class="pub-authors">陈超，XXX，XXX 等</p>
+                        <p class="pub-info">发明专利申请中，2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 竞赛项目 -->
+        <section id="competitions" class="content-section">
+            <h2 class="section-title">竞赛项目</h2>
+            <div class="competition-grid" id="competition-grid">
+                <!-- 竞赛项目通过JS动态生成 -->
+            </div>
+        </section>
+
+        <!-- 专业技能 -->
+        <section id="skills" class="content-section">
+            <h2 class="section-title">专业技能</h2>
+            <div class="skills-container" id="skills-container">
+                <!-- 技能通过JS动态生成 -->
+            </div>
+        </section>
+
+        <!-- 荣誉奖励 -->
+        <section id="awards" class="content-section">
+            <h2 class="section-title">荣誉奖励</h2>
+            <div class="awards-list" id="awards-list">
+                <div class="award-item">
+                    <span class="award-icon">🥈</span>
+                    <div class="award-content">
+                        <h4>西门子杯全国大学生智能制造挑战赛</h4>
+                        <p>国家级二等奖 · 2025年</p>
+                    </div>
+                </div>
+                <div class="award-item">
+                    <span class="award-icon">🥇</span>
+                    <div class="award-content">
+                        <h4>全国大学生电子设计竞赛</h4>
+                        <p>省级一等奖 · 2024年</p>
+                    </div>
+                </div>
+                <div class="award-item">
+                    <span class="award-icon">🥈</span>
+                    <div class="award-content">
+                        <h4>全国大学生数学建模竞赛</h4>
+                        <p>省级二等奖 · 2024年</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式 -->
+        <section id="contact" class="content-section">
+            <h2 class="section-title">联系方式</h2>
+            <div class="contact-info" id="contact-info">
+                <!-- 联系信息通过JS动态生成 -->
+            </div>
+            <div class="closing-note">
+                <p>感谢您访问我的个人主页，欢迎就学术研究、合作交流等事宜与我联系！</p>
+                <p class="quote">"路漫漫其修远兮，吾将上下而求索。"</p>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="page-footer">
+            <p>© 2026 陈超 · All Rights Reserved</p>
+        </footer>
+    </main>
+
+    <!-- 编辑模式按钮 -->
+    <button class="edit-toggle" onclick="toggleEditMode()">✏️ 编辑模式</button>
+
+    <!-- 模态框 - 个人陈述 -->
+    <div class="modal" id="statement-modal">
+        <div class="modal-overlay" onclick="closeModal('statement')"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>个人陈述</h3>
+                <button class="modal-close" onclick="closeModal('statement')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" id="statement-content">
+                <!-- 个人陈述内容通过JS动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框 - 简历 -->
+    <div class="modal" id="resume-modal">
+        <div class="modal-overlay" onclick="closeModal('resume')"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>个人简历</h3>
+                <button class="modal-close" onclick="closeModal('resume')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" id="resume-content">
+                <!-- 简历内容通过JS动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框 - 科研详情 -->
+    <div class="modal" id="research-detail-modal">
+        <div class="modal-overlay" onclick="closeModal('research-detail-modal')"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="research-detail-title">项目详情</h3>
+                <button class="modal-close" onclick="closeModal('research-detail-modal')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" id="research-detail-content">
+                <!-- 科研详情内容通过JS动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        let isEditMode = false;
+
+        // 初始化页面
+        function initPage() {
+            loadBasicInfo();
+            renderCourses();
+            renderResearch();
+            renderCompetitions();
+            renderSkills();
+            renderContact();
+            loadModals();
+            loadFromLocalStorage();
+        }
+
+        // 加载基础信息
+        function loadBasicInfo() {
+            document.getElementById('about-text').innerHTML = profile.about.split('\n').filter(l => l.trim()).map(l => `<p>${l}</p>`).join('');
+        }
+
+        // 渲染课程
+        function renderCourses() {
+            const container = document.getElementById('course-grid');
+            container.innerHTML = courses.map(course => 
+                `<div class="course-tag">${course}</div>`
+            ).join('');
+        }
+
+        // 渲染科研经历
+        function renderResearch() {
+            const container = document.getElementById('research-list');
+            container.innerHTML = researches.map((research, index) => `
+                <div class="research-card">
+                    <div class="research-header">
+                        <h3 class="research-title">${research.title}</h3>
+                        <span class="research-role">${research.role}</span>
+                    </div>
+                    <p class="research-time">${research.time}</p>
+                    <p class="research-description">${research.description}</p>
+                    
+                    <div class="research-contributions">
+                        <h4>主要工作与贡献</h4>
+                        <ul>
+                            ${research.contributions.map(c => `<li>${c}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="research-tech">
+                        ${research.tech.map(t => `<span class="tech-badge">${t}</span>`).join('')}
+                    </div>
+                    
+                    ${research.detail ? `
+                        <button class="detail-link" onclick="openResearchDetail(${index})">
+                            查看详细介绍 →
+                        </button>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        // 渲染竞赛项目
+        function renderCompetitions() {
+            const container = document.getElementById('competition-grid');
+            container.innerHTML = competitions.map(comp => `
+                <div class="competition-card">
+                    <div class="competition-badge">${comp.award}</div>
+                    <h4 class="competition-title">${comp.title}</h4>
+                    <p class="competition-time">${comp.time}</p>
+                    <p class="competition-desc">${comp.description}</p>
+                    <div class="competition-tech">
+                        ${comp.tech.map(t => `<span class="tech-small">${t}</span>`).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 渲染技能
+        function renderSkills() {
+            const container = document.getElementById('skills-container');
+            container.innerHTML = Object.entries(skills).map(([category, items]) => `
+                <div class="skill-category">
+                    <h4 class="skill-category-title">${category}</h4>
+                    <div class="skill-items">
+                        ${items.map(item => `<span class="skill-item">${item}</span>`).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 渲染联系方式
+        function renderContact() {
+            const container = document.getElementById('contact-info');
+            container.innerHTML = `
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <div class="contact-label">邮箱</div>
+                        <div class="contact-value">${contact.email}</div>
+                    </div>
+                </div>
+                ${contact.phone ? `
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <div class="contact-label">电话</div>
+                            <div class="contact-value">${contact.phone}</div>
+                        </div>
+                    </div>
+                ` : ''}
+                ${contact.github ? `
+                    <div class="contact-item">
+                        <span class="contact-icon">🔗</span>
+                        <div>
+                            <div class="contact-label">GitHub</div>
+                            <div class="contact-value">${contact.github}</div>
+                        </div>
+                    </div>
+                ` : ''}
+            `;
+        }
+
+        // 加载模态框内容
+        function loadModals() {
+            document.getElementById('statement-content').innerHTML = formatContent(personalStatement);
+            document.getElementById('resume-content').innerHTML = formatContent(resume);
+        }
+
+        // 格式化内容
+        function formatContent(text) {
+            if (!text) return '<p>内容待填写...</p>';
+            return text.split('\n').filter(line => line.trim()).map(line => {
+                if (line.startsWith('尊敬的') || line.startsWith('您好') || line.startsWith('此致') || line.startsWith('陈超')) {
+                    return `<p style="text-indent: 0;">${line}</p>`;
+                }
+                return `<p>${line}</p>`;
+            }).join('');
+        }
+
+        // 打开科研详情
+        function openResearchDetail(index) {
+            const research = researches[index];
+            document.getElementById('research-detail-title').textContent = research.title;
+            document.getElementById('research-detail-content').innerHTML = formatContent(research.detail);
+            openModal('research-detail-modal');
+        }
+
+        // 模态框控制
+        function openModal(id) {
+            document.getElementById(id + '-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id + '-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // ESC键关闭模态框
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // 导航高亮
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // 滚动监听 - 导航高亮
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.content-section');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // 编辑模式
+        function toggleEditMode() {
+            isEditMode = !isEditMode;
+            const btn = document.querySelector('.edit-toggle');
+            
+            if (isEditMode) {
+                btn.textContent = '💾 保存并退出';
+                btn.classList.add('active');
+                makeEditable();
+            } else {
+                btn.textContent = '✏️ 编辑模式';
+                btn.classList.remove('active');
+                saveToLocalStorage();
+                removeEditable();
+                alert('已保存到本地浏览器！记得同时更新 data.js 文件以便永久保存。');
+            }
+        }
+
+        function makeEditable() {
+            document.querySelectorAll('.research-description, li, .competition-desc, #about-text p, .contact-value').forEach(el => {
+                el.contentEditable = true;
+                el.classList.add('editable');
+            });
+        }
+
+        function removeEditable() {
+            document.querySelectorAll('[contentEditable="true"]').forEach(el => {
+                el.contentEditable = false;
+                el.classList.remove('editable');
+            });
+        }
+
+        function saveToLocalStorage() {
+            const data = {
+                about: document.querySelector('#about-text').innerHTML,
+                savedAt: new Date().toISOString()
+            };
+            localStorage.setItem('profileData', JSON.stringify(data));
+        }
+
+        function loadFromLocalStorage() {
+            const saved = localStorage.getItem('profileData');
+            if (saved) {
+                const data = JSON.parse(saved);
+                if (data.about) document.querySelector('#about-text').innerHTML = data.about;
+            }
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', initPage);
+    </script>
+</body>
+</html>
